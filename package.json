@@ -51,8 +51,6 @@
     },
     "graphs": {
       "Escrow": "./graphs/Escrow.fbp",
-      "IsEmpty": "./graphs/IsEmpty.fbp",
-      "IsEqual": "./graphs/IsEqual.fbp",
       "GroupCache": "./graphs/GroupCache.fbp",
       "WaitFor": "./graphs/WaitFor.fbp"
     }

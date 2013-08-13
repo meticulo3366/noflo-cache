@@ -10,15 +10,11 @@
     "noflo/noflo": "*"
   },
   "scripts": [
-    "components/Cache.coffee",
     "index.js"
   ],
   "json": [
     "component.json"
   ],
   "noflo": {
-    "components": {
-      "Cache": "components/Cache.coffee"
-    }
   }
 }
