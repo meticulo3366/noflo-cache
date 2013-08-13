@@ -3,7 +3,7 @@
   "description": "Packet Caching for NoFlo",
   "author": "Kenneth Kan <kenhkan@gmail.com>",
   "repo": "kenhkan/noflo-cache",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
   ],
   "dependencies": {
