@@ -24,9 +24,9 @@
     "nohoarder": "~0.0.1",
     "noflo": "~0.4.0",
     "noflo-swiss": "0.0.x",
-    "noflo-groups": "0.0.x",
-    "noflo-adapters": "0.0.x",
-    "noflo-strings": "0.0.x"
+    "noflo-groups": "0.1.x",
+    "noflo-adapters": "0.1.x",
+    "noflo-strings": "0.1.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
