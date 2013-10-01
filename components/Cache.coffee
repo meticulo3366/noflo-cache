@@ -29,16 +29,25 @@ class Cache extends noflo.Component
     @inPorts.size.on "data", (size) =>
       @cache.size = size
 
-    @inPorts.flush.on "disconnect", =>
+    # DEPRECATED
+    @inPorts.flush.on "data", =>
       @cache.flushAll @outPorts.out
       @outPorts.out.disconnect()
       @cache.reset() unless @keep
       @key = null
 
-    @inPorts.ready.on "disconnect", =>
-      @cache.flushCache @outPorts.out, @key
+    @inPorts.ready.on "data", =>
+      # Release by key
+      if @key?
+        @cache.flushCache @outPorts.out, @key
+        @cache.reset @key unless @keep
+      # Release all
+      else
+        @cache.flushAll @outPorts.out
+        @cache.reset() unless @keep
+
+      # Clean up
       @outPorts.out.disconnect()
-      @cache.reset @key unless @keep
       @key = null
 
     @inPorts.in.on "connect", =>
