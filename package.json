@@ -50,6 +50,7 @@
       "Cache": "./components/Cache.coffee"
     },
     "graphs": {
+      "CacheByGroup": "./graphs/CacheByGroup.fbp",
       "Escrow": "./graphs/Escrow.fbp",
       "GroupCache": "./graphs/GroupCache.fbp",
       "WaitFor": "./graphs/WaitFor.fbp"

@@ -32,3 +32,28 @@ Save incoming IPs and send the saved IPs to port 'out' upon any data IP from
 #### Out-Ports
 
 * *OUT*: The cached value
+
+
+### CacheByGroup
+
+Like `cache/Cache`, but the to-be-cached incoming value is automatically
+associated with the key that is the group (and the only group) to the incoming
+value. For instance, 'abc' would be the key in the following case:
+
+    CONNECT:
+    BEGINGROUP: 'abc'
+    DATA: 'things to cache'
+    ENDGROUP: 'abc'
+    DISCONNECT:
+
+#### In-Ports
+
+* *IN*: The value to cache. The group is used as the caching key.
+* *READY*: Release the cached value. The group of the incoming is used as the
+  the caching key.
+* SIZE: The maximum size
+* KEEP: Whether to keep the cached value or not after release
+
+#### Out-Ports
+
+* *OUT*: The cached value
