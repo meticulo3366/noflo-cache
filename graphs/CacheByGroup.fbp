@@ -1,0 +1,13 @@
+EXPORT=INPUT.IN:IN
+EXPORT=READY.IN:READY
+EXPORT=CACHE.SIZE:SIZE
+EXPORT=CACHE.KEEP:KEEP
+EXPORT=CACHE.OUT:OUT
+
+# Get the group as key to cache the value
+Input(core/Split) OUT -> IN ReadKey(groups/ReadGroups) GROUP -> KEY Cache(cache/Cache)
+Input() OUT -> IN Cache()
+
+# Get the group to read the cache
+Ready(core/Split) OUT -> IN ReadReadyKey(groups/ReadGroups) GROUP -> KEY Cache()
+Ready() OUT -> READY Cache()
