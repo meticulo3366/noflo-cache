@@ -21,12 +21,12 @@
     }
   ],
   "dependencies": {
-    "nohoarder": "~0.0.1",
-    "noflo": "~0.4.0",
-    "noflo-swiss": "0.0.x",
-    "noflo-groups": "0.1.x",
-    "noflo-adapters": "0.1.x",
-    "noflo-strings": "0.1.x"
+    "nohoarder": "~0.x.x",
+    "noflo": "~0.x.x",
+    "noflo-swiss": "0.x.x",
+    "noflo-groups": "0.x.x",
+    "noflo-adapters": "0.x.x",
+    "noflo-strings": "0.x.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
